@@ -2,27 +2,26 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Component
 @Entity
+@Table(name = "user")
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String pwd;
     private String realName;
     private int state;    //0：超级管理员 1.院部管理员 2.教研室主任3.老师
-    private int dept_id;   //院部id
-    private int pro_id;     //专业id
+    private Integer dept_id;   //院部id
+    private Integer pro_id;     //专业id
 
     public User() {
     }
 
-    public User(int id, String name, String pwd, String realName, int state, int dept_id, int pro_id) {
+    public User(int id, String name, String pwd, String realName, int state, Integer dept_id, Integer pro_id) {
         this.id = id;
         this.name = name;
         this.pwd = pwd;
@@ -85,19 +84,19 @@ public class User {
         this.state = state;
     }
 
-    public int getDept_id() {
+    public Integer getDept_id() {
         return dept_id;
     }
 
-    public void setDept_id(int dept_id) {
+    public void setDept_id(Integer dept_id) {
         this.dept_id = dept_id;
     }
 
-    public int getPro_id() {
+    public Integer getPro_id() {
         return pro_id;
     }
 
-    public void setPro_id(int pro_id) {
+    public void setPro_id(Integer pro_id) {
         this.pro_id = pro_id;
     }
 }

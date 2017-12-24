@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   证书
 * */
 @Component
 @Entity
+@Table(name = "certificate")
 public class Certificate {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;      //证书名称
     private String state;    //等级

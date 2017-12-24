@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   就业岗位
 * */
 @Component
 @Entity
+@Table(name = "jygw")
 public class Jygw {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int type;     //岗位面向 0初始就业岗位 1发展就业岗位
     private int job1_id;  //外键  岗位

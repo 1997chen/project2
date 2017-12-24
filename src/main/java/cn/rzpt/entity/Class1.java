@@ -2,27 +2,26 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   班级实体
 * */
 @Component
 @Entity
+@Table(name = "class1")
 public class Class1 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String note;  //备注
-    private int stuCnt;   //学生数
+    private Integer stuCnt;   //学生数
     private int year;     //入学年份
     private String type;   //类型   0高中班 1对口班 2单招班 33+2班 4定向培养 5混合班
-    private int pro_id;  //专业id
-    private int user_id;   //班主任id
-    private int plan_id;    //方案id
+    private Integer pro_id;  //专业id
+    private Integer user_id;   //班主任id
+    private Integer plan_id;    //方案id
 
     public Class1() {
     }
@@ -66,11 +65,11 @@ public class Class1 {
         this.note = note;
     }
 
-    public int getStuCnt() {
+    public Integer getStuCnt() {
         return stuCnt;
     }
 
-    public void setStuCnt(int stuCnt) {
+    public void setStuCnt(Integer stuCnt) {
         this.stuCnt = stuCnt;
     }
 
@@ -90,27 +89,27 @@ public class Class1 {
         this.type = type;
     }
 
-    public int getPro_id() {
+    public Integer getPro_id() {
         return pro_id;
     }
 
-    public void setPro_id(int pro_id) {
+    public void setPro_id(Integer pro_id) {
         this.pro_id = pro_id;
     }
 
-    public int getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 
-    public int getPlan_id() {
+    public Integer getPlan_id() {
         return plan_id;
     }
 
-    public void setPlan_id(int plan_id) {
+    public void setPlan_id(Integer plan_id) {
         this.plan_id = plan_id;
     }
 }

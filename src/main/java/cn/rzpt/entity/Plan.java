@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   人才培养方案实体
 * */
 @Component
 @Entity
+@Table(name = "plan")
 public class Plan {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int type;  // 类型 0面向职场版 1普通版
     private String name;
@@ -24,14 +23,14 @@ public class Plan {
     private String szSuggest;   //继续专业学习深造建议
     private int state; //状态 0草稿 1提交 2院部审核通过 -2院部审核不通过 3教务处审核通过 -3教务处审核不通过 4应用
     private int classCnt;      //使用班级数量
-    private int year;   //xxx级学生
+    private Integer year;   //xxx级学生
     private String submitTime;    //提交时间
     private String check1Time;     //院部审核通过时间
     private String check2Time;     //教务处审核通过时间
-    private int llHour;          //理论学时
-    private int sjHour;           //实践学时
-    private int hours;            //总学时
-    private int grades;           //总学分
+    private Integer llHour;          //理论学时
+    private Integer sjHour;           //实践学时
+    private Integer hours;            //总学时
+    private Integer grades;           //总学分
     private int subUser_id;       // user外键 指定人
     private int user1_id;          //院部审核通过人
     private int user2_id;          //外键 教务处审核通过人
@@ -148,11 +147,11 @@ public class Plan {
         this.classCnt = classCnt;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -180,35 +179,35 @@ public class Plan {
         this.check2Time = check2Time;
     }
 
-    public int getLlHour() {
+    public Integer getLlHour() {
         return llHour;
     }
 
-    public void setLlHour(int llHour) {
+    public void setLlHour(Integer llHour) {
         this.llHour = llHour;
     }
 
-    public int getSjHour() {
+    public Integer getSjHour() {
         return sjHour;
     }
 
-    public void setSjHour(int sjHour) {
+    public void setSjHour(Integer sjHour) {
         this.sjHour = sjHour;
     }
 
-    public int getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(int hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 
-    public int getGrades() {
+    public Integer getGrades() {
         return grades;
     }
 
-    public void setGrades(int grades) {
+    public void setGrades(Integer grades) {
         this.grades = grades;
     }
 

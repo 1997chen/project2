@@ -1,9 +1,7 @@
 package cn.rzpt.entity;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
  *   专业实体
@@ -11,16 +9,17 @@ import javax.persistence.Id;
 
 @Component
 @Entity
+@Table(name = "profession")
 public class Profession {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String pno;   //专业代码
     private int state;   //专业状态0招生中 1停止招生
     private String note;   //备注
-    private int userCnt;   //教师数
-    private int classCnt;   //班级数
+    private Integer userCnt;   //教师数
+    private Integer classCnt;   //班级数
     private int dept_id;    //院部id
 
     public Profession() {
@@ -80,19 +79,19 @@ public class Profession {
         this.note = note;
     }
 
-    public int getUserCnt() {
+    public Integer getUserCnt() {
         return userCnt;
     }
 
-    public void setUserCnt(int userCnt) {
+    public void setUserCnt(Integer userCnt) {
         this.userCnt = userCnt;
     }
 
-    public int getClassCnt() {
+    public Integer getClassCnt() {
         return classCnt;
     }
 
-    public void setClassCnt(int classCnt) {
+    public void setClassCnt(Integer classCnt) {
         this.classCnt = classCnt;
     }
 

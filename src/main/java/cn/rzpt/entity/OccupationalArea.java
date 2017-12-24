@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   职业领域
 * */
 @Component
 @Entity
+@Table(name = "occupationalArea")
 public class OccupationalArea {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String content;   //详情
     private int plan_id;       //外键 人才培养方案

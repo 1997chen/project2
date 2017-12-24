@@ -9,9 +9,9 @@
 <html>
 <head>
     <title>教研室主任</title>
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <script src="../../js/jQuery.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+    <script src="../../../js/jQuery.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -125,16 +125,10 @@
                     </div>
                     <div id="panel-element-qwer" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <a href="#">新建班级</a>
+                            <a href="/officer/class_add1/16.action">新建班级</a>
                         </div>
                         <div class="panel-body">
-                            <a href="#">班级列表</a>
-                        </div>
-                        <div class="panel-body">
-                            <a href="#">班级维护</a>
-                        </div>
-                        <div class="panel-body">
-                            <a href="#">班级查询</a>
+                            <a href="/officer/pro_list/16.action">班级列表</a>
                         </div>
                     </div>
                 </div>
@@ -145,16 +139,10 @@
                     </div>
                     <div id="panel-element-qwerr" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <a href="#">新建课程</a>
+                            <a href="/officer/course_add1/16.action">新建课程</a>
                         </div>
                         <div class="panel-body">
-                            <a href="#">课程列表</a>
-                        </div>
-                        <div class="panel-body">
-                            <a href="#">课程维护</a>
-                        </div>
-                        <div class="panel-body">
-                            <a href="#">课程查询</a>
+                            <a href="/officer/course_list/16.action">课程列表</a>
                         </div>
                         <div class="panel-body">
                             <a href="#">课程导入</a>
@@ -188,67 +176,17 @@
                     </div>
                     <div id="panel-element-qwersrr" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <a href="#">分专业查看</a>
+                            <a href="/plan/pro_list/16.action">分专业查看</a>
                         </div>
                         <div class="panel-body">
-                            <a href="#">分年度查看</a>
+                            <a href="/plan/year_list/16.action">分年度查看</a>
                         </div>
                         <div class="panel-body">
-                            <a href="#">查看本专业</a>
-                        </div>
-                        <div class="panel-body">
-                            <a href="#">查询</a>
+                            <a href="/plan/plan_show/16.action">查看本专业</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-10 column">
-            <div class="jumbotron">
-                <h1>
-                    个人信息：
-                </h1>
-                <p>
-                    用户名：officer<br>
-                    身 份:教研室主任<br>
-                    XXXX信息：yyyy<br>
-                    XXXX信息：zzzz<br>
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">更多</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <a id="modal-164105" href="#modal-container-164105" role="button" class="btn" data-toggle="modal">触发遮罩窗体</a>
-
-            <div class="modal fade" id="modal-container-164105" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                标题
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            内容...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                            <button type="button" class="btn btn-primary">保存</button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
 </body>
 </html>

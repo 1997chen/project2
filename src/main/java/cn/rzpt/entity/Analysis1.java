@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   教学分配表
 * */
 @Component
 @Entity
+@Table(name = "analysis1")
 public class Analysis1 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int term;        //学期
     private int rxjy;        //入学教育

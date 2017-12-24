@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   培养目标
 * */
 @Component
 @Entity
+@Table(name = "trainingobjective")
 public class TrainingObjective {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int type1;      //培养目标类别 0 培养目标 1培养规格
     private int type2;      //培养规格类型 0知识目标 1能力目标 2素质目标

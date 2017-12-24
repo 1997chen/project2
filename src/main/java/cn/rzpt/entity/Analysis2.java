@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
  *   各类课程学时比例
  * */
 @Component
 @Entity
+@Table(name = "analysis2")
 public class Analysis2 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int type1;   //类别1：默认为0  0：通识教育课程 1：专业教育课程 2：创新创业教育课程
     private int type2;   //类别2：默认为0 0：必修课程 1：选修课程 2：非课程类教育教学活动3：基础通用课程 4：专业平台课程 5：岗位导向课程

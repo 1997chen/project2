@@ -2,18 +2,17 @@ package cn.rzpt.entity;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
 *   课程
 * */
 @Component
 @Entity
+@Table(name = "course")
 public class Course {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int type1;   //类别1：默认是0  0：通识教育课桌 1：专业教育课程 2：创新创业教育课程
     private int type2;   //类别2：默认是0  0：必修课程 1：选修课程 2：非课程类教育教学活动 3：基础通用课程 4：专业平台课程
@@ -22,17 +21,17 @@ public class Course {
     private int type5;   //类别5：0：未归类 1：入学教育 2：军政训练 3：劳动教育 4：职场体验 5：整周实训 6：项目实践 7：顶岗实习
     private String name;    //课程名称
     private String cno;      //课程代码
-    private int classHour;   //课程学时
-    private double grade;     //学分
-    private int llGrade;      //理论学时
-    private int sjGrade;      //实际学时
+    private Integer classHour;   //课程学时
+    private Double grade;     //学分
+    private Integer llGrade;      //理论学时
+    private Integer sjGrade;      //实际学时
     private int term;      //学期
-    private int weekHour;      //周课时
-    private int weeks;      //周数
+    private Integer weekHour;      //周课时
+    private Integer weeks;      //周数
     private String content;      //*课程主要内容
     private String ability;      //*培养能力
     private int examScheme;      //考核方式：0：笔试 1：大作业+答辩 2：过程考核
-    private int pro_id;      //外键：专业
+    private Integer pro_id;      //外键：专业
 
     public Course() {
     }
@@ -126,35 +125,35 @@ public class Course {
         this.cno = cno;
     }
 
-    public int getClassHour() {
+    public Integer getClassHour() {
         return classHour;
     }
 
-    public void setClassHour(int classHour) {
+    public void setClassHour(Integer classHour) {
         this.classHour = classHour;
     }
 
-    public double getGrade() {
+    public Double getGrade() {
         return grade;
     }
 
-    public void setGrade(double grade) {
+    public void setGrade(Double grade) {
         this.grade = grade;
     }
 
-    public int getLlGrade() {
+    public Integer getLlGrade() {
         return llGrade;
     }
 
-    public void setLlGrade(int llGrade) {
+    public void setLlGrade(Integer llGrade) {
         this.llGrade = llGrade;
     }
 
-    public int getSjGrade() {
+    public Integer getSjGrade() {
         return sjGrade;
     }
 
-    public void setSjGrade(int sjGrade) {
+    public void setSjGrade(Integer sjGrade) {
         this.sjGrade = sjGrade;
     }
 
@@ -166,19 +165,19 @@ public class Course {
         this.term = term;
     }
 
-    public int getWeekHour() {
+    public Integer getWeekHour() {
         return weekHour;
     }
 
-    public void setWeekHour(int weekHour) {
+    public void setWeekHour(Integer weekHour) {
         this.weekHour = weekHour;
     }
 
-    public int getWeeks() {
+    public Integer getWeeks() {
         return weeks;
     }
 
-    public void setWeeks(int weeks) {
+    public void setWeeks(Integer weeks) {
         this.weeks = weeks;
     }
 
@@ -206,11 +205,11 @@ public class Course {
         this.examScheme = examScheme;
     }
 
-    public int getPro_id() {
+    public Integer getPro_id() {
         return pro_id;
     }
 
-    public void setPro_id(int pro_id) {
+    public void setPro_id(Integer pro_id) {
         this.pro_id = pro_id;
     }
 }

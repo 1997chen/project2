@@ -9,9 +9,9 @@
 <html>
 <head>
     <title>超级管理员</title>
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <script src="../../js/jQuery.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+    <script src="../../../js/jQuery.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
